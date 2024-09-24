@@ -4,16 +4,16 @@
 ) }}
 
 SELECT
-  "id"            AS beer_id,
-  TRIM("name")    AS beer_name,
-  "style"         AS beer_style,
-  "abv"           AS abv,
-  "ibu"           AS ibu,
+  "ID"            AS beer_id,
+  TRIM("NAME")    AS beer_name,
+  "STYLE"         AS beer_style,
+  "ABV"           AS abv,
+  "IBU"           AS ibu,
   CASE 
-       WHEN "ibu" <= 50 THEN 'Malty'
-       WHEN "ibu" > 50 THEN 'Hoppy'
+       WHEN "IBU" <= 50 THEN 'Malty'
+       WHEN "IBU" > 50 THEN 'Hoppy'
    END AS bitterness,
-  "brewery_id"    AS brewery_id,
-  "ounces"        AS ounces
+  "BREWERY_ID"    AS brewery_id,
+  "OUNCES"        AS ounces
 FROM
-  {{ source('WORKSPACE_863912091', 'beers') }}
+  {{ source('WORKSPACE_1183594922', 'seed_beers') }}
