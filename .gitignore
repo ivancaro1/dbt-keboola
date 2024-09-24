@@ -7,3 +7,7 @@ logs/
 /.user.yml
 .DS_Store
 .DS_Store
+venv/
+venv/*
+venv
+.venv/

@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/mauriciogilbello/Documents/Cuesta Partners/DBT/dbt-keboola/venv/bin/python3" "$0" "$@"
-' '''
+#!/Users/ivancaro/Documents/dbt-keboola/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
