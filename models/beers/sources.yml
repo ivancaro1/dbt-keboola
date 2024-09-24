@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: WORKSPACE_863912091
+  - name: WORKSPACE_1183594922
 
     freshness:
       warn_after:
@@ -14,7 +14,7 @@ sources:
     loaded_at_field: '"_timestamp"'
 
     tables:
-      - name: beers
+      - name: seed_beers
         description: "list of beers"
 #        meta: {<dictionary>}
         identifier: "seed_beers"
@@ -44,7 +44,7 @@ sources:
           - name: '"ounces"'
 #          - name: '"_timestamp"'
 
-      - name: breweries
+      - name: seed_breweries
         description: "list of breweries"
 #        meta: {<dictionary>}
         identifier: "seed_breweries"

@@ -4,10 +4,10 @@
 ) }}
 
 SELECT
-  "id"                    AS brewery_id,
-  trim("name")            AS brewery_name,
-  trim("city")            AS brewery_city,
-  trim("state")           AS brewery_state,
+  "ID"                    AS brewery_id,
+  trim("NAME")            AS brewery_name,
+  trim("CITY")            AS brewery_city,
+  trim("STATE")           AS brewery_state,
   'USA'                 AS brewery_country
 FROM
-  {{ source('WORKSPACE_863912091', 'breweries') }}
+  {{ source('WORKSPACE_1183594922', 'seed_breweries') }}

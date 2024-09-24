@@ -56,7 +56,7 @@ models:
       - name: brewery_state
         description: State of the brewery
 
-  - name: beers
+  - name: seed_beers
     tags:
       - operations
     meta:
@@ -135,7 +135,7 @@ models:
               description: "Average Volume of a single unit"
 
 
-  - name: breweries
+  - name: seed_breweries
     tags:
       - operations
     meta:

@@ -26,3 +26,10 @@ code ~/.zshrc
 step 5 test snowflake conection
 dbt debug -t dev --profiles-dir .
 test
+step 6 
+change workspaces names
+step 7 
+carga datos estaticos de csv a workspace 
+dbt seed
+
+dbt run -t dev  --profiles-dir .
