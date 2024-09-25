@@ -1,0 +1,223 @@
+version: 2
+sources:
+    - name: out.c-MODEL
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+      schema: out.c-MODEL
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: BI_OPPORTUNITY_REPORT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: BI_OPPORTUNITY_WEEKLY_REPORT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: BI_PROFITABILITY_REPORT_ACTUALS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: FACT_APPLICANT_STATUS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: FCT_APPLICANT_STATUS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: FCT_CONTRACTOR_LABOR_COST
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"CONTRACTOR_LABOR_ID"'
+              tests:
+                - unique
+                - not_null
+            - name: '"CONTRACTOR_LABOR_LINE_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: FCT_CUSTOMER_INVOICE
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"INVOICE_ID"'
+              tests:
+                - unique
+                - not_null
+            - name: '"INVOICE_LINE_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: FCT_INTERNAL_LABOR_COST
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"INTERNAL_LABOR_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: FCT_OTHER_COST
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"OTHER_COST_ID"'
+              tests:
+                - unique
+                - not_null
+            - name: '"OTHER_COST_LINE_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: FCT_PROJECT_RESOURCE_ASSIGNMENT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"ASSIGNMENT_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: PROJECT_ENVIRONMENT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_APPLICANT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_COST_ACCOUNT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"COST_ACCOUNT_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_CUSTOMER
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_CUSTOMER_TYPE
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"CUSTOMER_TYPE_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_JOB
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_OPPORTUNITY
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_OPPORTUNITY_STATUS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"OPPORTUNITY_STATUS_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_POSITION_ROLE
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_PROJECT
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_PROJECT_STATUS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"PROJECT_STATUS_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_RESOURCE
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_RESOURCE_ASSIGNMENT_STATUS
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"ASSIGNMENT_STATUS_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_RESOURCE_LEVEL
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: REF_SERVICE_LINE
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns:
+            - name: '"SERVICE_LINE_ID"'
+              tests:
+                - unique
+                - not_null
+        - name: REF_VENDOR
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
