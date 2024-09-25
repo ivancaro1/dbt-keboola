@@ -16,4 +16,4 @@ SELECT
   "BREWERY_ID"    AS brewery_id,
   "OUNCES"        AS ounces
 FROM
-  {{ source('WORKSPACE_1183594922', 'seed_beers') }}
+  {{ source(var('DBT_KBC_DEV_SCHEMA'), 'seed_beers') }}
