@@ -10,4 +10,4 @@ SELECT
   trim("STATE")           AS brewery_state,
   'USA'                 AS brewery_country
 FROM
-  {{ source(var('DBT_KBC_DEV_SCHEMA'), 'seed_breweries') }}
+{{ ref('seed_breweries') }}
