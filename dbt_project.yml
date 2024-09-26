@@ -39,6 +39,11 @@ seeds:
         ibu: decimal
         abv: decimal
 
+sources:
+  - name: cuesta-ex-mavenlink
+    tables:
+      - name: users
+        identifier: in.c-cuesta-ex-mavenlink-965342437.users
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
