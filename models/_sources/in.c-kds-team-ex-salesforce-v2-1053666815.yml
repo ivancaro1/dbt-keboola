@@ -1,0 +1,41 @@
+version: 2
+sources:
+    - name: in.c-kds-team-ex-salesforce-v2-1053666815
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+      schema: out.c-salesforce-anon
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: Account
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: Campaign
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: Opportunity
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: Resource_Plan__c
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: Task
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []

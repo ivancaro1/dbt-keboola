@@ -1,0 +1,47 @@
+version: 2
+sources:
+    - name: in.c-cuesta-ex-mavenlink-965342437
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+      schema: out.c-mavenlink-anon
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: resource_custom_field
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: time_entries
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: users
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: workspaces
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: workspace_allocations
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: workspace_resources
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
