@@ -13,5 +13,5 @@ sources:
     
     loaded_at_field: '"_timestamp"'
 
-    tables:
-      - name: users
+    #tables:
+    #  - name: users
