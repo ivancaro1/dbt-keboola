@@ -1,3 +1,5 @@
+{{ config(materialized="table")}}
+
 
 -- create what the current view should look like
 with ref_project_status_new as (
