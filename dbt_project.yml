@@ -49,4 +49,4 @@ models:
   internal:
       # Applies to all files under models/example/
       ref_resource:
-          materialized: view
+          materialized: table
