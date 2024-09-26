@@ -15,3 +15,9 @@ sources:
             schema: true
             identifier: true
           columns: []
+        - name: workspaces
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []

@@ -9,7 +9,7 @@ with ref_project_status_new as (
         , ifnull(nullif("status_message",''), '$N/A')::varchar(50) as project_status_name
         , False::boolean as is_deleted
         , 'MAVENLINK'::varchar(30) as source_system
-    from {{ source ('in.c-cuesta-ex-mavenlink-965342437','workspaces') }}
+    from {{ source ('in.c-test','workspaces') }}
 )
 
 -- create the diffs

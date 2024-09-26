@@ -15,6 +15,12 @@ sources:
             schema: true
             identifier: true
           columns: []
+        - name: ref_resource
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
         - name: test
           quoting:
             database: true
