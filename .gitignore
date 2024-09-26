@@ -11,3 +11,5 @@ venv/
 venv/*
 venv
 .venv/
+models/_sources/
+models/_sources/*

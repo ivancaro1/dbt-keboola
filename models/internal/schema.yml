@@ -3,3 +3,9 @@ version: 2
 models:
   - name: ref_project_status
     description: this is documentation of this table
+    columns:
+      - name: project_status_id
+        description: This is a unique identifier for the event
+        tests:
+          - unique
+          - not_null
