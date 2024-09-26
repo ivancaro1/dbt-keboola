@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: c-cuesta-ex-mavenlink-965342437
+
+    tables:
+      - name: users
