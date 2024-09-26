@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: ref_project_status
+    description: this is documentation of this table
+    columns:
+      - name: project_status_id
+        tests:
+          - unique
+          - not_null
+        description: this is a documentation for this column
+
