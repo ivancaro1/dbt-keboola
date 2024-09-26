@@ -53,6 +53,15 @@ sources:
 #          - ... # declare additional tests
         tags: ["breweries", "brewery", "ecommerce"]
 
+        - us
+
+        version: 2
+
+      sources:
+        - name: c-cuesta-ex-mavenlink-965342437   # Nombre del dataset o esquema
+          tables:
+            - name: users                         # Nombre de la tabla
+
         quoting:
           database: true
           schema: true

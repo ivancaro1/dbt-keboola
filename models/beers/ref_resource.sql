@@ -1,7 +1,8 @@
 -- ref_resource.sql
 {{ config(
     materialized="table"
-) }}with ref_resource as (
+) }}
+with ref_resource as (
     select * from {{ ref('your_source_table') }}
 ),
 
