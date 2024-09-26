@@ -4,7 +4,7 @@ beer_analytics:
     outputs:
         dev:
             account: '{{ env_var("DBT_KBC_DEV_ACCOUNT") }}'
-            database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+            database: '{{ env_var("DBT_KBC_DEV_DATABASE", "DBT_KBC_DEV_9596_DATABASE") }}' 
             password: '{{ env_var("DBT_KBC_DEV_PASSWORD") }}'
             schema: '{{ env_var("DBT_KBC_DEV_SCHEMA") }}'
             type: '{{ env_var("DBT_KBC_DEV_TYPE") }}'
