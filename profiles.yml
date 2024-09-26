@@ -1,5 +1,5 @@
 send_anonymous_usage_stats: false
-beer_analytics:
+internal:
     target: dev
     outputs:
         dev:
