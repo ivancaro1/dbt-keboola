@@ -2,11 +2,21 @@
     materialized="table"
 ) }}
 
-select
-    id as resource_id,
-    ifnull(full_name, '$N/A') as resource_display_name,
-    ifnull(email_address, '$N/A') as resource_email,
-    ifnull(nullif(concat(left(hex(encode("headline")), 25), right(hex(encode("headline")), 25)), ''), '-1') as position_role_id,
-    account_id
+select distinct
+    ifnull(nullif("Id", ''), '-1') as customer_id
+    , ifnull(nullif(concat(left(hex_encode("Type")::varchar,10), right(hex_encode("Type")::varchar,10)),''),'-1') as customer_type_id
+    , '-1' as customer_status_id
+    , ifnull(nullif("Industry", ''), '-1') as industry_type_id
+    , concat('SALESFORCE | ',"Id") as customer_key
+    , ifnull(nullif("Name", ''), '$N/A') as customer_name
+    , nullif("BillingStreet", '') as customer_address_line_1
+    , nullif("BillingState", '') as customer_address_line_2
+    , nullif("BillingPostalCode", '') as customer_postal_code
+    , nullif("BillingCity", '') as customer_city
+    , to_date(left(nullif("LastModifiedDate", ''),10), 'yyyy-mm-dd') as row_valid_from
+    , to_date('9999-12-31', 'yyyy-mm-dd') as row_valid_to
+    , 'C' as row_status
+    , "IsDeleted" as is_deleted
+    , 'SALESFORCE' as source_system
 from 
-{{ source ('in.c-cuesta-ex-mavenlink-965342437', 'users') }}
+{{ source ('in.c-kds-team-ex-salesforce-v2-1053666815', 'Account') }}
