@@ -1,5 +1,7 @@
 -- stg_resource.sql
-
+{{ config(
+    materialized="table"
+) }}
 with users as (
     select
         id as resource_id,

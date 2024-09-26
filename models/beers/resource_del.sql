@@ -1,5 +1,7 @@
 -- resource_del.sql
-
+{{ config(
+    materialized="table"
+) }}
 with ref_resource as (
     select * from {{ ref('final_resource') }}
 ),

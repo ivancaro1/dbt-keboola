@@ -1,6 +1,7 @@
 -- ref_resource.sql
-
-with ref_resource as (
+{{ config(
+    materialized="table"
+) }}with ref_resource as (
     select * from {{ ref('your_source_table') }}
 ),
 
