@@ -3,5 +3,15 @@ version: 2
 sources:
   - name: c-cuesta-ex-mavenlink-965342437
 
+    freshness:
+      warn_after:
+        count: 7
+        period: day
+      error_after:
+        count: 30
+        period: day
+    
+    loaded_at_field: '"_timestamp"'
+
     tables:
       - name: users
