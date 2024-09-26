@@ -1,0 +1,23 @@
+version: 2
+sources:
+    - name: in.c-keboola-ex-onedrive-1176997053
+      freshness:
+        warn_after:
+            count: 1
+            period: day
+      database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+      schema: in.c-keboola-ex-onedrive-1176997053
+      loaded_at_field: '"_timestamp"'
+      tables:
+        - name: REF_QB_ML_PROJECT_SL_MAPPING
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []
+        - name: salesforce_test
+          quoting:
+            database: true
+            schema: true
+            identifier: true
+          columns: []

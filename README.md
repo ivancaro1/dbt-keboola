@@ -25,6 +25,8 @@ save workspaces credentials in linux file
 code ~/.zshrc
 step 5 test snowflake conection
 dbt debug -t dev --profiles-dir .
+step 6
+create yml
 test
 step 6 
 change workspaces names
