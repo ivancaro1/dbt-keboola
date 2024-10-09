@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: ref_project_status
+    description: The generated table contains project status information, consolidating new and existing records from the workspaces source (new data) and the REF_PROJECT_STATUS model (existing data). This table reflects the current status records of projects and flags those that have been deleted or no longer exist in the new data source.
+    columns:
+      - name: project_status_id
+        description: This is the unique identifier for the project status. The value comes from the status_key in the original data source. If no value exists for status_key, -1 is assigned.
+        tests:
+          - unique
+          - not_null
+      - name: project_status_key
+        description: This is a composite key combining the source system (in this case, 'MAVENLINK') with the project_status_id. This ensures that each project status key is unique within the context of the source system.
+        tests:
+          - not_null
+      - name: project_status_name
+        description: This is the name or message associated with the project status. If no message is available, the default value '$N/A' is assigned.
+      - name: is_deleted
+        description: Indicates whether the record has been marked as deleted. This column will have a value of 1 (true) if the project is no longer present in the new data source (ref_project_status_new), and 0 (false) if the record is still valid.
+        tests:
+          - accepted_values:
+              values: [0, 1]
+      - name: source_system
+        description: Specifies the source system from which the project status originates. In this case, it will always be 'MAVENLINK', indicating that the data comes from this system.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['MAVENLINK']
