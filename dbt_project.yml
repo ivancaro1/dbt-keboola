@@ -48,5 +48,5 @@ seeds:
 models:
   internal:
       # Applies to all files under models/example/
-      ref_resource:
-          materialized: view
+      ref_project_status:
+          materialized: table
