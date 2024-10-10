@@ -26,3 +26,57 @@ models:
           - not_null
           - accepted_values:
               values: ['MAVENLINK']
+
+  - name: ref_project
+    description: "Contains information about projects, including their name, dates, status, and additional metadata."
+    columns:
+      - name: PROJECT_KEY
+        description: "Primary key that uniquely identifies each project."
+        tests:
+          - not_null
+          - unique
+
+      - name: PROJECT_ID
+        description: "Unique identifier for the project, used in the source system or for reporting purposes."
+        tests:
+          - not_null
+          - unique
+
+      - name: PROJECT_NAME
+        description: "Descriptive name of the project."
+        tests:
+          - not_null
+
+      - name: PROJECT_START_DATE
+        description: "The start date of the project."
+      - name: PROJECT_STATUS_ID
+        description: "Identifier for the current status of the project, related to a status reference table."
+        
+      - name: SERVICE_LINE_ID
+        description: "Identifier for the service line to which the project belongs."
+        tests:
+          - not_null
+
+      - name: ROW_VALID_FROM
+        description: "Date and time when this record became valid."
+        #tests:
+         # - not_null
+
+      - name: ROW_VALID_TO
+        description: "Date and time until this record is valid. If NULL, the record is still valid."
+        #tests:
+         # - not_null
+
+      - name: IS_DELETED
+        description: "Boolean flag indicating if the project has been logically deleted from the system."
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]
+
+      - name: SOURCE_SYSTEM
+        description: "The source system from which the project data originates."
+        #tests:
+         # - not_null
+         # - unique
+          

@@ -16,7 +16,7 @@ step 2
 -- check conection env
 pip install dbt-core
 pip install dbt-snowflake
-step 3
+step 3∏
 kbc dbt init
 host: https://connection.keboola.com/
 token:xxx
